@@ -1,0 +1,46 @@
+$base-color: #323232;
+$gradient: linear-gradient(90deg, #E05C55 0%, #C13F38 100%);
+$acccent-color: rgb(223, 187, 135);
+$sec-color: rgb(183, 171, 152);
+$stroke-color:rgba(183,171,152,0.3);
+$white: #fff;
+
+
+body {
+    font-family: 'Gramatika-Light';
+    background-color: $white;
+    background-image: url(/images/bg.png);
+    background-attachment: fixed;
+    line-height: normal;
+    color: $base-color;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(100% - 5rem, 1760px);
+    margin-inline: auto;
+    position: relative;
+
+     @media (min-width: 320px) and (max-width: 576px) {
+        width: min(100% - 1rem, 1760px);
+     }
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}

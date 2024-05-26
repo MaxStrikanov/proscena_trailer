@@ -1,0 +1,155 @@
+.rent {
+  margin-top: 128px;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      margin-top: 33px;
+    }
+
+  &__title {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  font-family: Gramatika-Light;
+  font-weight: 400;
+  line-height: 63px;
+  word-wrap: break-word;
+  margin: 0 auto;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      font-size: 24px;
+      line-height: 105%
+    }
+
+    & span {
+      font-family: Gramatika-Medium;
+    }
+  }
+
+
+  &__items {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   @media (min-width: 320px) and (max-width: 576px) {
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+  }
+
+
+  &__content {
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      display: contents;
+    }
+
+    &_title {
+      font-family: Gramatika-Regular;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 105%;
+      max-width: 573px;
+
+        @media (min-width: 320px) and (max-width: 576px) {
+          max-width: 100%;
+          font-size: 16px;
+          line-height: 105%;
+          order: -3;
+        }
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+
+        @media (min-width: 320px) and (max-width: 576px) {
+          gap: 10px;
+          order: -1;
+        }
+
+      & li {
+        font-family: Gramatika-Light;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        list-style-image: url(/images/marker.png);
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        max-width: 780.695px;
+        height: 60px;
+
+          @media (min-width: 320px) and (max-width: 576px) {
+            font-size: 14px;
+            line-height: 100%;
+            order: -2;
+          }
+
+        &::marker {
+          
+        }
+        &::before {
+          content: '';
+          background-image: url(/images/marker.png);
+          background-repeat: no-repeat;
+          width: 50px;
+          height: 60px;
+          margin-right: 10px; 
+          margin-top: 40px;
+          display: grid;
+          place-items: center ;
+        }
+      }
+    }
+  }
+
+  &__img {}
+
+  &__btn {
+    background: $gradient;
+    border: none;
+    color: $white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Gramatika-Medium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 0px 0px #773535;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 50px;
+    text-transform: uppercase;
+    width: 420px;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 100%;
+      order: 2;
+      margin-top: 26px;
+      
+    }
+
+    &:hover {
+      background: linear-gradient(145deg, #d9574d, #b44c44);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      background: linear-gradient(145deg, #c34c43, #a9443d);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
