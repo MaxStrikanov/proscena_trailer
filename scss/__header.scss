@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 14.48px 0 21.33px;
+  border-bottom: 1px solid #D7D7D7;
+
+  &__logo {
+    width: 128.293px;
+    height: 90.6px;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      width: 53.809px;
+      height: 38px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    max-width: 152.669px;
+    border-left: 1px solid #323232;
+    padding-left: 20px;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: normal;
+    margin-left: 20px;
+
+     @media (min-width: 320px) and (max-width: 576px) {
+       display: none;
+       border-left: 0px solid #323232;
+     }
+  }
+
+  &__contact {
+
+    &_items {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__worktime {
+    font-family: Gramatika-Light;
+    font-size: 12px;
+    position: relative;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      display: none;
+    }
+    
+    &::before {
+      content: "";
+      width: 6.328px;
+      height: 6.328px;
+      background-color: #00C04D;
+      position: absolute;
+      top: 8px;
+      left: -15px;
+      border-radius: 50%;
+    }
+
+  }
+
+  &__phone{
+    font-family: Inter;
+    font-size: 24px;
+    text-decoration: none;
+    color: $base-color;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+     font-size: 14px;
+    }
+  }
+
+  &__modal {
+
+    &_btn {
+      font-family: Gramatika-Light;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      border: none;
+      padding: 0;
+      outline: none;
+      background-color: transparent;
+      margin-top: -10px;
+      cursor: pointer;
+
+      @media (min-width: 320px) and (max-width: 576px) {
+        font-size: 14px;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
