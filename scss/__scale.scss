@@ -11,6 +11,12 @@
     word-wrap: break-word;
     margin: 50px auto;
 
+      @media (max-width: 1366px) {
+        font-size: 40px;
+        max-width: 756.763px;
+        line-height: 106%;
+      }
+
       @media (min-width: 320px) and (max-width: 576px) {
         font-size: 24px;
         line-height: 105%;
@@ -27,6 +33,10 @@
     justify-content: center;  
     gap: 20px;
 
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
     @media (min-width: 320px) and (max-width: 576px) {
       flex-wrap: wrap;
     }
@@ -36,6 +46,10 @@
 
     &_img {
       width: 870px;
+
+      @media (max-width: 1366px) {
+        width: 600px;
+      }
 
       @media (min-width: 320px) and (max-width: 576px) {
         width: 100%;
@@ -55,6 +69,11 @@
       line-height: normal;
       margin-top: 30px;
 
+      @media (max-width: 1366px) {
+        font-size: 30px;
+        margin-top: 20px;
+      }
+
       @media (min-width: 320px) and (max-width: 576px) {
         font-size: 14px;
         margin-top: 10px;
@@ -63,45 +82,3 @@
   }
 }
 
-.custom-block {
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: rotate(-2deg);
-  font-family: 'Arial', sans-serif;
-}
-
-.custom-block h2 {
-  margin-top: 0;
-  font-size: 20px;
-  text-align: center;
-}
-
-.custom-block ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.custom-block ul li {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  font-size: 14px;
-}
-
-.custom-block ul li::before {
-  content: '+';
-  color: white;
-  background-color: #00a651;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  font-size: 16px;
-}

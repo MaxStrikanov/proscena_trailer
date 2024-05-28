@@ -8,6 +8,13 @@
   position: relative;
   padding: 40px 0 55px 24px;
 
+  @media (max-width: 767px) {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 50px auto 20px;
+  }
+
   @media (min-width: 320px) and (max-width: 576px) {
     width: 100%;
     height: auto;
@@ -23,6 +30,10 @@
     font-weight: 400;
     line-height: 105%;
 
+    @media (max-width: 767px) {
+      font-size: 40px;
+    }
+
     @media (min-width: 320px) and (max-width: 576px) {
       font-size: 24px;
     }
@@ -37,6 +48,10 @@
     font-weight: 400;
     line-height: 36px;
     word-wrap: break-word;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
 
     @media (min-width: 320px) and (max-width: 576px) {
       font-size: 14px;
@@ -54,6 +69,12 @@
     word-wrap: break-word;
     margin-left: 3%;
 
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 26px;
+      margin-left: 3%;
+    }
+
     @media (min-width: 320px) and (max-width: 576px) {
       font-size: 14px;
       line-height: 100%;
@@ -65,6 +86,14 @@
     position: absolute;
     right: 46px;
     bottom: 0;
+
+    @media (max-width: 767px) {
+      width: 282.579px;
+      height: 422.196px;
+      right: 1px;
+      bottom: 11px;
+      z-index: 0;
+    }
 
     @media (min-width: 320px) and (max-width: 576px) {
       width: 151.579px;
@@ -78,6 +107,11 @@
 
   & .main__btn {
     margin-top: 150px;
+
+    @media (max-width: 767px) {
+      margin: 50px auto 0;
+      display: block;
+    }
 
       @media (min-width: 320px) and (max-width: 576px) {
         margin-top: 211px;

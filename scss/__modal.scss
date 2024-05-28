@@ -64,18 +64,36 @@
 
 #modal_1 .modal__right img {
   max-width: 100%;
-  height: auto;
-  transform: scale(1.05);
-  border-radius: 10px;
-  position: absolute;
-  bottom: -5px;
-  right: -6px;
-  height: 577.121px;
+    height: 100%;
+    transform: scale(1.05);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5px;
+    right: -6px;
 }
 
 .modal .main__btn {
   margin-top: 16.7px;
 }
+
+@media (max-width: 1366px) {
+  .modal__content {
+    max-width: calc(100% - 200px);
+  }
+
+    #modal .modal__right img {
+      height: 633.121px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .modal .main__btn {
+    margin-top: 0px;
+  }
+}
+
+
+
 
 form {
   margin-top: 76px;

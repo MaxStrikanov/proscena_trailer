@@ -5,6 +5,7 @@ const modal = () => {
   const openModalBtn = document.getElementById("openModalBtn");
   const openModal = document.getElementById("modal-kp");
   const openModalBKp = document.getElementById("modal-price");
+  const orderBtn = document.querySelectorAll('.popup');
 
   openModalBtn.onclick = function() {
       modal.style.display = "block";
@@ -29,7 +30,24 @@ const modal = () => {
         modal_2.style.display = "none";
       }
   }
+
+  document.addEventListener('click', () => {
+      
+    orderBtn.forEach((item) => {
+      item.onclick = () => {
+        modal_1.style.display = "block"; 
+      }
+    })
+  })
+
+
+
 }
+
+
+
+
+
 
 export default modal
 
