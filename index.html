@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Proсцена прицепы</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
       <div class="header__contact_items">
         <div class="header__worktime">Сейчас работаем</div>
         <a href="tel:88008008080" class="header__phone">8-800-800-80-80</a>
-        <button class="header__modal_btn">Заказать звонок</button>
+        <button class="header__modal_btn popup">Заказать звонок</button>
       </div>
     </header>
 
@@ -49,7 +49,7 @@
             <p>работаем с физическими и <br> юридическими лицами</p>
           </li>
         </ul>
-        <button class="main__btn">УЗНАТЬ СТОИМОСТЬ СЦЕНЫ</button>
+        <button class="main__btn" id="modal-price">УЗНАТЬ СТОИМОСТЬ СЦЕНЫ</button>
       </div>
 
       <div class="main__img">
@@ -57,16 +57,16 @@
       </div>
     </main>
   </div>
-    <div class="cloud">
-      <img src="/images/cloud.png" alt="">
-    </div>
-<div class="container">
+  <div class="cloud">
+    <img src="/images/cloud-1.png" alt="">
+  </div>
+  <div class="container">
     <section class="option">
       <h2 class="option__title"><span>Выберите подходящую сцену</span> по размерам и комплектации</h2>
       <h3 class="option__subtitle">На выбор 3 типа сцен разного масштаба</h3>
 
       <div class="option__slider">
-        <div class="option__tab_items">
+        <div class="option__tab_items" >
           <div class="option__tab_item active">Сцена-прицеп</div>
           <span></span>
           <div class="option__tab_item">Сцена-фура</div>
@@ -83,8 +83,10 @@
           </div>
         </div>
       </div>
+      <div class="btn__wrapper">
+        <button class="main__btn popup" >УЗНАТЬ подробнее</button>
+      </div>
 
-      <button class="main__btn">УЗНАТЬ подробнее</button>
     </section>
 
     <section class="scale">
@@ -140,7 +142,7 @@
             <li>не нужен штат монтажников и грузчиков, всю работу сможет делать 1 человек — водитель.</li>
           </ul>
 
-          <button class="rent__btn">ПОЛУЧИТЬ КП <br>НА СЦЕНУ-ПРИЦЕП</button>
+          <button class="rent__btn" id="modal-kp">ПОЛУЧИТЬ КП <br>НА СЦЕНУ-ПРИЦЕП</button>
 
         </div>
         <div class="rent__img">
@@ -157,7 +159,7 @@
           <div class="accordion__item_title">
             <span>Сколько времени занимает установка и разборка сцены?</span>
             <div class="accordion__item_icon">
-              <img class="" src="/images/plus.svg" alt="">
+              <img class="visible" src="/images/plus.svg" alt="">
               <img class="hidden" src="/images/minus.svg" alt="">
             </div>
           </div>
@@ -172,7 +174,7 @@
           <div class="accordion__item_title">
             <span>Нужны ли специальные навыки или оборудование для установки сцены?</span>
             <div class="accordion__item_icon">
-              <img class="" src="/images/plus.svg" alt="">
+              <img class="visible" src="/images/plus.svg" alt="">
               <img class="hidden" src="/images/minus.svg" alt="">
             </div>
           </div>
@@ -187,7 +189,7 @@
           <div class="accordion__item_title">
             <span>Какие условия хранения необходимы для сцены-прицепа?</span>
             <div class="accordion__item_icon">
-              <img class="" src="/images/plus.svg" alt="">
+              <img class="visible" src="/images/plus.svg" alt="">
               <img class="hidden" src="/images/minus.svg" alt="">
             </div>
           </div>
@@ -202,7 +204,7 @@
           <div class="accordion__item_title">
             <span>Из каких материалов сделана сцена и как она будет вести себя в разных погодных условиях?</span>
             <div class="accordion__item_icon">
-              <img class="" src="/images/plus.svg" alt="">
+              <img class="visible" src="/images/plus.svg" alt="">
               <img class="hidden" src="/images/minus.svg" alt="">
             </div>
           </div>
@@ -218,7 +220,7 @@
             <span>Какие дополнительные аксессуары могут быть полезны для моей сцены (например, освещение, звуковое
               оборудование, боковые панели)?</span>
             <div class="accordion__item_icon">
-              <img class="" src="/images/plus.svg" alt="">
+              <img class="visible" src="/images/plus.svg" alt="">
               <img class="hidden" src="/images/minus.svg" alt="">
             </div>
           </div>
@@ -241,20 +243,76 @@
         <li>сориентируем по срокам</li>
       </ul>
 
-      <button class="main__btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
-
-     
-
-          <img src="/images/feedback.png" alt="">
+      <button class="main__btn" id="openModalBtn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+      <img src="/images/feedback.png" alt="">
     </section>
+
+
+    
+
+  <div id="modal" class="modal">
+    <div class="modal__content">
+        <div class="modal__left">
+            <h2>Ответим на любой вопрос о сцене-прицепе</h2>
+            <p>И получите подробную консультацию с ответом на все вопросы</p>
+            <form>
+                <input type="text" placeholder="Введите ваше имя" required>
+                <input type="tel" placeholder="Введите ваш номер телефона" required>
+                <button class="main__btn">ЗАДАТЬ СВОЙ ВОПРОС</button>
+            </form>
+
+            <a href="" class="policy">Оставляя заявку я даю согласие на обработку моих персональных данных</a>
+        </div>
+        <div class="modal__right">
+            <img src="/images/feedback.png" alt="Person Image">
+        </div>
+    </div>
+</div>
+
+<div id="modal_1" class="modal">
+  <div class="modal__content">
+      <div class="modal__left">
+          <h2>Узнать стоимость сцены-прицепа</h2>
+          <p>И получите подробную консультацию с ответом на все вопросы</p>
+          <form>
+              <input type="text" placeholder="Введите ваше имя" required>
+              <input type="tel" placeholder="Введите ваш номер телефона" required>
+              <button class="main__btn">УЗНАТЬ СТОИМОСТЬ СЦЕНЫ</button>
+          </form>
+
+          <a href="" class="policy">Оставляя заявку я даю согласие на обработку моих персональных данных</a>
+      </div>
+      <div class="modal__right">
+          <img src="/images/popup-1.png" alt="">
+      </div>
+  </div>
+</div>
+
+<div id="modal_2" class="modal">
+  <div class="modal__content">
+      <div class="modal__left">
+          <h2>Получить КП<br> на сцену-прицеп</h2>
+          <p>И получите подробную консультацию с ответом на все вопросы</p>
+          <form>
+              <input type="text" placeholder="Введите ваше имя" required>
+              <input type="tel" placeholder="Введите ваш номер телефона" required>
+              <button class="main__btn">получить коммерческое предложение</button>
+          </form>
+
+          <a href="" class="policy">Оставляя заявку я даю согласие на обработку моих персональных данных</a>
+      </div>
+      <div class="modal__right">
+          <img src="/images/image 98.png" alt="">
+      </div>
+  </div>
+</div>
+    
 
 
     <footer class="footer">
 
       <div class="footer__logo">
         <img src="/images/Logo.svg" alt="Лого">
-
-        
       </div>
       <div class="footer__text">
         Делаем сценическое оборудование доступным
@@ -263,7 +321,7 @@
       <div class="footer__contact_items">
         <div class="footer__worktime">Сейчас работаем</div>
         <a href="tel:88008008080" class="footer__phone">8-800-800-80-80</a>
-        <button class="footer__modal_btn">Заказать звонок</button>
+        <button class="footer__modal_btn popup">Заказать звонок</button>
       </div>
     </footer>
     <a href="" class="privacy__policy">Политика конфиденциальности</a>
