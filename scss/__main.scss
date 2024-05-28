@@ -29,11 +29,13 @@ grid-template-columns: 777px auto;
   &__img {
     width: 1299.476px;
     height: 900.373px;
+    margin-left: -179px;
 
     @media (min-width: 320px) and (max-width: 576px) {
       order: -2;
       width: 100%;
       height: auto;
+      margin-left: 0px;
     }
   }
 
